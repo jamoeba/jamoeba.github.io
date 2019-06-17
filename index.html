@@ -1,528 +1,943 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="Jamoeba">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="Jamoeba">
+    
+    <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>fi3ework&#39;s Studio</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
 
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+</script>
+
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js" as="script">
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
 </head>
-</html>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
+
+    
+        <body class="home-body">
+    
+    
+<header class="header index-header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <a class="home-link" href=/>fi3ework's Studio.</a>
 </header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-string.format" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/17/string.format/" class="article-date">
-  <time datetime="2019-06-17T09:28:04.851Z" itemprop="datePublished">2019-06-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://docs.python.org/3/library/string.html#string.Formatter" target="_blank" rel="noopener">https://docs.python.org/3/library/string.html#string.Formatter</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/17/string.format/" data-id="cjx06ffkv0005rssd6gyqmuop" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+    <div class="wrapper">
+        <div class="site-intro" style="
 
 
-  
-    <article id="post-schedule" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/17/schedule/" class="article-date">
-  <time datetime="2019-06-17T09:28:04.851Z" itemprop="datePublished">2019-06-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>三个月学习计划安排：<br>主攻：人工智能，数学，计算机相关原理<br>涉及内容：<br>机器学习各类主流算法的原理和实现、神经网络与深度学习的原理、设计及相关应用、高等数学全部内容、计算机相关原理（计算机组成原理、分布式计算、计算机网络原理、密码学、数字信号处理、图像识别、数据结构、操作系统）、数值计算、计算机系统结构、编译原理、软件工程、数据库原理、英语、python组件内容、linux相关操作<br>粗拟计划：<br>结合各高校招生安排，欲参与研究生、博士生招生录取，分析专研方向和学科，增长英语能力，大量阅读相关文献并且统一分类总结，留意相关技术活动，参与并留下成绩，最后有指向地进行对应大学的录取准备。<br>在核心期刊上以第一或第二作者发表过文章！<br>关注邻域内的研究方向、技术趋势与学者研究成果</p>
-<p>拟定日程安排：<br>前1个星期：<br>周一：整理所有学过的内容，提取提纲、关键字，组成知识网络，初步分析对应内容学习时长<br>周二：整理应学书籍知识内容，提取提纲关键字，分析学习时长<br>周三、周四：分析高校招生方式和要求，组成要求网络以供后续学习侧重，一定要做到细<br>周五：上午制定后续一个月的详细学习计划，下午开始实施<br>每周六晚上进行身体锻炼，周日上午阅读其他书籍，周日下午及晚上看friends学习英语</p>
-<p>一个月后集中强化英语，把托福雅思搞定！</p>
-<p>计算机核心期刊新排名：2004部分核心期刊名单（自动化、计算机部分与无线电、电信部分)<br>自动化、计算机部分<br>1 计算机学报 北京 中国计算机学会等<br>2 软件学报 北京 中国科学院软件研究所<br>3 计算机研究与发展 北京 中国科学院计算技术研究所等<br>4 自动化学报 北京 中国科学院等<br>5 计算机科学 重庆 国家科技部西南信息中心<br>6 控制理论与应用 广州 中国科学院系统科学研究所等<br>7 计算机辅助设计与图形学学报 北京 中国计算机学会等<br>8 计算机工程与应用 北京 华北计算技术研究所<br>9 模式识别与人工智能 北京 中国自动化学会等<br>10 控制与决策 沈阳 东北大学<br>11 小型微型计算机系统 沈阳 中国科学院沈阳计算机技术研究所<br>12 计算机工程 上海 上海市计算机协会<br>13 计算机应用 北京 中国科学院计算机应用研究所等<br>14 信息与控制 沈阳 中国科学院沈阳自动化研究所<br>15 机器人 沈阳 中国科学院沈阳自动化研究所<br>16 中国图象图形学报 A版 北京 中国图象图形学会<br>17 计算机应用研究 成都 四川省计算机应用研究中心<br>18 系统仿真学报 北京 航天机电集团北京长峰计算机技术有限公司<br>19 计算机集成制造系统—CIMS 北京 国家863计划CIMS主题办公室等<br>20 遥感学报 .北京 中国地理学会环境遥感分会，中国科学院遥感应用研究所<br>21 中文信息学报 北京 中国中文信息学会<br>22 微计算机信息 北京 中国计算机用户协会，山西协会<br>23 数据采集与处理 南京 中国电子学会等<br>24 微型机与应用 北京 信息产业部电子第6研究所<br>25 传感器技术 哈尔滨 信息产业部电子第49研究所<br>26 传感技术学报 南京 国家教委全国高校传感技术研究会，东南大学<br>27 计算机工程与设计 北京 航天工业总公司706所<br>28 计算机应用与软件 上海 上海计算技术研究所等<br>29 微型计算机 重庆 科技部西南信息中心<br>30 微电子学与计算机 西安 中国航天工业总公等<br>　
-计算机类部分期刊杂志投稿信息</p>
-<p>1、《计算机工程与设计》和《计算机应用与软件》核心，相对来讲比较好中。</p>
-<p>2、《计算机应用研究》国家一级期刊，核心，录用率60%, 通知得较快。</p>
-<p>3、《计算机工程》中文核心，最大优点是审稿快。有基金号和项目编号的文章录用概率高。</p>
-<p>4、《计算机工程与应用》核心，比较好中，审稿速度比较慢。</p>
-<p>5、《微型机与应用》，核心，审稿速度一般，无需审稿费和版面费，并不好中(大家都想免费的午餐,收录数量有限).</p>
-<p>6、《计算机仿真》科技论文统计源，非中文核心。好像有仿真结果，交钱就发，好中。</p>
-<p>7、非核心，好中的期刊<br>《计算机安全》 无审稿费<br>《计算机与现代化》 无审稿费<br>《现代通信》 无需审稿费和版面费<br>《网络安全技术与应用》无审稿费，给钱就发</p>
-<p>《中国雷达》免审稿费，免版面费</p>
-<p>《西安通信学院学报》免审稿费，免版面费</p>
-<p>《重庆通信学院学报》免审稿费，版面费 200/篇</p>
-<p>EI检索：《软件学报》《计算机学报》《计算机研究与发展》<br>《计算机科学》《计算机工程》</p>
-<p>１ .《小型微型计算机系统》 沈阳</p>
-<p>审稿周期：四个月 （不固定）</p>
-<p>发表周期：一年半（不办理加急业务）</p>
-<p>审稿费：100元（初审通过后才要求作者寄审稿费，这个要赞一下！）</p>
-<p>服务态度：极好</p>
-<p>投稿方式：邮寄打印稿，交付审稿费后可在其主页上查询稿件状态。</p>
-<p>转一下华中科技大学一位朋友的经验：</p>
-<hr>
-<p>我中小微的经验：</p>
-<p>1) 看看小微最近2年的杂志，有没有相关方面的文章，如果没有，中的机会大。</p>
-<p>2）参考文献要尽量多引用那些是小微杂志编辑委员会写的文章的。</p>
-<p>3）小微要求内容比较新，而且注重实现，要有数据和实现。</p>
-<p>4）运气好的1个月就可以中。</p>
-<hr>
-<p>２.《计算机应用》 成都</p>
-<p>审稿周期：三个月（一般两个月左右能知道录用与否）</p>
-<p>发表周期：半年（我所了解到最快的）</p>
-<p>审稿费：50元</p>
-<p>服务态度：较好</p>
-<p>投稿方式：在其网站上在线投稿</p>
-<p>对文章的质量要求较高，杂志社工作认真负责，信息反馈较快，送审两个月后基本上都能收到稿件的最终处理结果。</p>
-<p>对是否挂基金号与项目编号不是特别看重，比较适合我这样没有基金资助的学生，呵呵。</p>
-<p>３.《计算机科学》 重庆</p>
-<p>审稿周期：两个月（快慢不等）</p>
-<p>发表周期：8个月到一年不等（有时候可以加急发表）</p>
-<p>无需审稿费</p>
-<p>服务态度：一般</p>
-<p>投稿方式：邮寄打印稿，交付审稿费后可在其主页上查询稿件状态。</p>
-<p>比较注重较为新颖的文章，如果挂有基金号或者重大项目编号，一周内就能返回录用通知。在其网站上经常看到有当天收稿，第二天就录用的，估计是被杂志社约稿了，呵呵。</p>
-<p>４.《计算机工程》 上海</p>
-<p>审稿周期：两个月</p>
-<p>发表周期：一年左右（可以加急发表）</p>
-<p>审稿费：50元</p>
-<p>服务态度：较好</p>
-<p>投稿方式：e-mail，可在其网站上留言查询审稿情况</p>
-<p>最大的有点就是审稿快，一般一个半月就能收到消息，两个月内肯定能收到消息。有篇文章今天才让我修改，呵呵。</p>
-<p>有基金号或者项目编号等的文章录用机率较高。</p>
-<p>５.《计算机应用研究》 成都</p>
-<p>审稿周期：三个月</p>
-<p>发表周期：15个月左右</p>
-<p>无需审稿费</p>
-<p>服务态度：较好（e-mail反馈很快）</p>
-<p>投稿方式：e-mail，可在其网站上留言查询审稿情况</p>
-<p>特别注重有基金号或者项目编号等的文章，最快的一周内就能收到录用通知。很喜欢把作者的稿件录用在增刊上，商业味道太浓。</p>
-<p>不过有一点要赞，就是杂志社寄来的录用通知上编辑的字迹很隽秀，看着很养眼</p>
-<p>６.《计算机工程与设计》 北京</p>
-<p>审稿周期：三个月</p>
-<p>发表周期：一年左右(可以加急发表)</p>
-<p>审稿费：100元</p>
-<p>服务态度：一般</p>
-<p>投稿方式：在线网站投稿，较为正规</p>
-<p>有同学投中过，比较亲睐有基金号或者项目编号等的文章。审稿时间较长。有趣的是，编辑部寄来的发票上还可以刮奖。</p>
-<p>７.《计算机工程与应用》 北京</p>
-<p>审稿周期：号称是三个月，其实编辑透露最长有四个半月的</p>
-<p>发表周期：9个月以上</p>
-<p>审稿费：50元</p>
-<p>服务态度：较差</p>
-<p>投稿方式：在线网站投稿</p>
-<p>以前被这个编辑部郁闷过一回，交了审稿费如果被退稿，审稿意见都是千篇一律的一条：缺乏创新。感觉很不负责任，即便不录用，返回给作者一些有参考价值的审稿意见，应该是一个编辑部起码能够为作者做的一点事情。从这一点看，杂志社没有发展前途。（可能带一些个人感情色彩，大家批判的吸收，呵呵）</p>
-<p>８.《微型机与应用》 北京</p>
-<p>审稿周期：两个月</p>
-<p>发表周期：半年左右</p>
-<p>无需审稿费</p>
-<p>投稿方式：e-mail</p>
-<p>服务态度：很差（话没说完编辑就会撂电话，BS）</p>
-<p>稿件较多，所以比较难中，有些时候稿件投到这家不录用，再投到《计算机科学》等刊物却录用了，搞不懂为什么。</p>
-<p>９.《微型机与计算机》 西安</p>
-<p>审稿周期：两个月</p>
-<p>发表周期：8个月左右</p>
-<p>无需审稿费</p>
-<p>投稿方式：邮寄打印稿</p>
-<p>服务态度：较好</p>
-<p>杂志档次较低，比较好中，不过也看运气，暑假前投稿审稿会快一些。录用后不发邮件通知，而是直接给作者寄挂号信通知录用。较为另类，呵呵。</p>
-<p>计算机类期刊投稿心得(转贴)</p>
-<p>1、【杂志名称】 计算机应用研究</p>
-<p>【杂志文章包含专业】建模，仿真，网络，人工智能，比较杂。</p>
-<p>【投稿联系方式】<a href="http://www.arocmag.com/" target="_blank" rel="noopener">http://www.arocmag.com/</a> 注册在线投稿审稿</p>
-<p>【投稿费用】250元/页</p>
-<p>【杂志级别】国家一级期刊，全国中文核心期刊</p>
-<p>【稿酬回报】无</p>
-<p>【投稿感受】录用率始终保持在60%以上，不包括增刊，想上增刊，交钱就行（250元/页）。无审稿费，1~2月就知道结果了！</p>
-<p>3、【杂志名称】系统仿真学报</p>
-<p>【杂志文章包含专业】建模，仿真，计算机技术，网络，评估等。内容较杂。</p>
-<p>【投稿联系绞健?/font &gt;<a href="http://www.china-simulation.com" target="_blank" rel="noopener">www.china-simulation.com</a></p>
-<p>【投稿费用】版面费1200元左右，审稿费150元(中文)。</p>
-<p>【杂志级别】中文核心期刊，EI统计源期刊。</p>
-<p>【稿酬回报】有，但不多，百十来元吧。</p>
-<p>【投稿感受】录用率不高，20％左右，审稿周期2个月，发表周期1.3年左右。编辑态度较好。论文要求有仿真结果。</p>
-<p>【其他】2005年，论文被EI检索率90％以上。</p>
-<p>6、【杂志名称】《小型微型计算机系统》</p>
-<p>【杂志文章包含专业】发表我国计算机领域的科学研究、工程设计及应用、高等教育等方面的学术论文，并介绍国外先进计算机理论和技术。主要栏目有计算机硬件、软件、网络、多媒体等技术的研究、开发、应用。</p>
-<p>【投稿联系方式】</p>
-<p>【投稿费用】审稿费100元，版面费1000左右</p>
-<p>【杂志级别】核心期刊，EI检索。</p>
-<p>【稿酬回报】有</p>
-<p>【投稿感受】先投打印稿投送，初审通过再投电子稿。审稿2～3个月，录用率为20％左右，难度中。</p>
-<p>【其他】编辑部态度不错。</p>
-<p>7、【杂志名称】《计算机仿真》</p>
-<p>【杂志文章包含专业】仿真理论，仿真工程应用，计算机技术，建模技术等。内容较杂。</p>
-<p>【投稿联系方式】</p>
-<p>【投稿费用】审稿费100元，版面费250/页。</p>
-<p>【杂志级别】中国核心期刊。</p>
-<p>【稿酬回报】有，但不多。</p>
-<p>【投稿感受】电子投稿。审稿1～2个月，录用率为70％左右。较容易，基本上有仿真结果就能发表。</p>
-<p>【其他】编辑部态度不错。</p>
-<p>8、【杂志名称】《自动化学报》</p>
-<p>【杂志文章包含专业】自动化技术，计算机技术等。</p>
-<p>【投稿联系方式】</p>
-<p>【投稿费用】审稿费1５0元</p>
-<p>【杂志级别】国家一级期刊，中文核心期刊。</p>
-<p>【稿酬回报】有</p>
-<p>【投稿感受】网上投稿。审稿２～４个月，录用率为２０％左右。</p>
-<p>【其他】编辑部态度不错。</p>
-<p>9、【杂志名称】微计算机信息</p>
-<p>【杂志文章包含专业】自动化为主，计算机其余方向少量。</p>
-<p>【投稿联系方式】<a href="http://www.autocontrol.com.cn//magazine" target="_blank" rel="noopener">http://www.autocontrol.com.cn//magazine</a></p>
-<p>【投稿费用】无审稿费，版面费 850元（有基金支持），1500元（不确定，无基金支持）</p>
-<p>【杂志级别】北大2004核心，少部分单位不承认。</p>
-<p>【稿酬回报】无</p>
-<p>【投稿感受】投稿极容易接受，录用通知时间短（一周）、发表大概10个月，最好写自动化和计算机结合的。</p>
-<p>【其他】我续投过一篇，开始还不错，后来感觉乱来。现在要评高，再也不投了。</p>
-<p>17、【计算机工程】</p>
-<p>可在线投,审稿快，一般一个月，最多2个月，通过的快拒的也快，难度一般;审稿费50,版面费一般800-900,稿费100,以前据说比较牛败，现在。。。一般吧。见刊周期长。</p>
-<p>18、【计算机工程与应用】</p>
-<p>可在线投,审稿速度慢，一般3个月，快的有2个月的，慢的到了4个月。比较好中。审稿费50,版面费1000-1200,贵，有稿费，不到100 ，越来越龊。想投的时候是月刊，等我有idea的时候是半月刊，等我完稿后居然是旬刊了。谁知道过2个月会不会变成周报。见刊周期半年－一年半汗</p>
-<p>19、【微型机与应用】</p>
-<p>编辑部于2006年1月起对《微型机与应用》的办刊模式及刊载内容进行较大调整，不再单纯刊登技术研究论文。稿件需到<a href="http://www.aetnet.com.cn《电子技术应用》月刊参加审稿。" target="_blank" rel="noopener">www.aetnet.com.cn《电子技术应用》月刊参加审稿。</a></p>
-<p>可在线投，审稿速度一般，2个月。文章质量比上面两个还龊，但是并不好中，原因是不要审稿费不要版面费，结果都蜂拥的去投啊，而它每期收录文章非常有限（据说发稿费200左右，现在可能变了），中不中要看运气，当然特别牛败的文章除外。</p>
-<p>20、【计算机应用】</p>
-<p>可在线投，审稿费是￥50。这个我就没调戏过了，只是看师兄透过，中的情况类似于楼上计算机工程，文章质量老实说，还可以，感觉编辑比较严谨（我说的是排版啊，对作者态度方面，不是说文章唔），钱么，1k左右，稿费不详。三个多月给的反馈消息吧。</p>
-<p>21、【计算机科学】</p>
-<p>啊 这个，好处就是不要审稿费了。文章质量还可以。。部分学校曾经把它当权威？</p>
-<p>22、【计算机安全】，给钱就发（牛的不要钱）。两周。</p>
-<p>23、【计算机与现代化】，给钱就发（牛的不要钱）。两周。</p>
-<p>24、【微机发展】改成了《计算机技术与发展》。比较好中，2-3周给消息，一般能中，不过也有拒的。稿件质量比上面两家好些，其实也就那样。便宜，600－700估计就能搞定。可以网投</p>
-<p>25、【现代通信】</p>
-<p>非核心，无须审稿费，也无须版面费</p>
-<p>有稿费，一般150-200元左右</p>
-<p>想赚点小钱的话可以发发啊！呵呵</p>
-<p>26、【网络安全技术与应用】</p>
-<p>非核心，无审稿费，版面费800-1200元左右；</p>
-<p>无稿费；给钱就发，email投稿 ；<a href="http://www.nstap.com.cn" target="_blank" rel="noopener">www.nstap.com.cn</a></p>
-<p>中国科技信息》、《中国西部科技》、《甘肃科技纵横》、《大众科技》、《甘肃科技》、《沿海企业与科技》、《信息技术》、《现代电子技术》交钱就发！</p>
-<p>《软件学报》《计算机学报》《计算机研究与发展》为计算机类三大权威刊物，不敢乱评</p>
-<p>投稿经验<br><a href="https://blog.csdn.net/GarfieldEr007/article/details/51297660" target="_blank" rel="noopener">https://blog.csdn.net/GarfieldEr007/article/details/51297660</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/17/schedule/" data-id="cjx06ffl10006rssdf4g2n1j4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-    <article id="post-bash learning" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/17/bash learning/" class="article-date">
-  <time datetime="2019-06-17T09:27:54.430Z" itemprop="datePublished">2019-06-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.cnblogs.com/vamei/p/8151169.html" target="_blank" rel="noopener">https://www.cnblogs.com/vamei/p/8151169.html</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/17/bash learning/" data-id="cjx06ffkq0001rssd4l4fr8lo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-    <article id="post-defining python source code encodings" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/17/defining python source code encodings/" class="article-date">
-  <time datetime="2019-06-17T09:27:54.430Z" itemprop="datePublished">2019-06-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.python.org/dev/peps/pep-0263/" target="_blank" rel="noopener">https://www.python.org/dev/peps/pep-0263/</a></p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/17/defining python source code encodings/" data-id="cjx06ffks0002rssds6s9q39x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-embeddable_python_install_module" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/17/embeddable_python_install_module/" class="article-date">
-  <time datetime="2019-06-17T09:27:54.430Z" itemprop="datePublished">2019-06-17</time>
-</a>
+height:50vh;
+">
     
-  </div>
-  <div class="article-inner">
+    <!-- 主页  -->
     
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>embeddable python是python官网提供的windows下使用的可移植python环境，因为集成度很高，所以在安装和添加组件的时候出很多问题</p>
-<p>总之解决方法是：<br>目录下的“pythonXX._pth”中的“import site”取消注释，原文可参考官方文档</p>
-<p>Note that .pth files (without leading underscore) will be processed normally by the site module when import site has been specified.</p>
-<p>When no ._pth file is found, this is how sys.path is populated on Windows:<br>•An empty entry is added at the start, which corresponds to the current directory.<br>•If the environment variable PYTHONPATH exists, as described in Environment variables, its entries are added next. Note that on Windows, paths in this variable must be separated by semicolons, to distinguish them from the colon used in drive identifiers (C:\ etc.).<br>•Additional “application paths” can be added in the registry as subkeys of \SOFTWARE\Python\PythonCore{version}\PythonPath under both the HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE hives. Subkeys which have semicolon-delimited path strings as their default value will cause each path to be added to sys.path. (Note that all known installers only use HKLM, so HKCU is typically empty.)<br>•If the environment variable PYTHONHOME is set, it is assumed as “Python Home”. Otherwise, the path of the main Python executable is used to locate a “landmark file” (either Lib\os.py or pythonXY.zip) to deduce the “Python Home”. If a Python home is found, the relevant sub-directories added to sys.path (Lib, plat-win, etc) are based on that folder. Otherwise, the core Python path is constructed from the PythonPath stored in the registry.<br>•If the Python Home cannot be located, no PYTHONPATH is specified in the environment, and no registry entries can be found, a default path with relative entries is used (e.g. .\Lib;.\plat-win, etc).</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/17/embeddable_python_install_module/" data-id="cjx06ffku0004rssdj5idwocx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-artificial_intelligence" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/17/artificial_intelligence/" class="article-date">
-  <time datetime="2019-06-17T09:27:54.429Z" itemprop="datePublished">2019-06-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+    <!-- 文章页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            fi3ework's Studio.
+            <!-- 文章页  -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+                it's better to burn out than to fade away
+            
+            <!-- 文章页  -->
+            
+        </p>
+        <!-- 文章页meta -->
         
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/17/artificial_intelligence/" data-id="cjx06ffkl0000rssd3ev6ekmj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
+        <script>
+ 
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
 
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in');
+      }
+    }
+  }
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/17/hello-world/" class="article-date">
-  <time datetime="2019-06-17T09:00:50.265Z" itemprop="datePublished">2019-06-17</time>
-</a>
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  function asyncErr(){
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
+    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  var asyncLoadWithFallBack = function(arr, success, reject) {
+      var currReject = function(){
+        reject()
+        arr.shift()
+        if(arr.length)
+          async(arr[0], success, currReject)
+        }
+
+      async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack([
+    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
+    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
+    "/lib/webfontloader.min.js"
+  ], asyncCb, asyncErr)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main index-page">
     
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/17/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/17/string.format/" >
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            https://docs.python.org/3/library/string.html#string.Formatter
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/17/schedule/" >
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            三个月学习计划安排：主攻：人工智能，数学，计算机相关原理涉及内容：机器学习各类主流算法的原理和实现、神经网络与深度学习的原理、设计及相关应用、高等数学全部内容、计算机相关原理（计算机组成原理、分布式计算、计算机网络原理、密码学、数字信号处理、图像识别、数据结构、操作系统）、数值计算、计算机系统结构、编译原理、软件工程、数据库原理、英语、python组件内容、linux相关操作粗拟计划：结合各高校招生安排，欲参与研究生、博士生招生录取，分析专研方向和学科，增长英语能力，大量阅读相关文献并且统一分类总结，留意相关技术活动，参与并留下成绩，最后有指向地进行对应大学的录取准备。在核心期刊上以第一...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/17/bash learning/" >
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            https://www.cnblogs.com/vamei/p/8151169.html
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/17/defining python source code encodings/" >
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            https://www.python.org/dev/peps/pep-0263/
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/17/embeddable_python_install_module/" >
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            embeddable python是python官网提供的windows下使用的可移植python环境，因为集成度很高，所以在安装和添加组件的时候出很多问题
+总之解决方法是：目录下的“pythonXX._pth”中的“import site”取消注释，原文可参考官方文档
+Note that .pth files (without leading underscore) will be processed normally by the site module when import site has been specified.
+When no ._pth file is found,...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/17/artificial_intelligence/" >
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/17/hello-world/" >
+            
+                <span>Hello World</span>
+        </a>
+        <div class="abstract-content">
+            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new "My New Post"
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+More info: Writing
+Run server1$ hexo server
 
-      
+Mo...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    <!-- paginator  -->
+    
+</main>
+            <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" alt="avatar" src= /avatar/Misaka.jpg >
+    <div class="profile-name">fi3ework</div>
+    
+    <div class="profile-signature">
+        witness me
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/17/hello-world/" data-id="cjx06ffkt0003rssdsl68656c" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
+    
+    
+    <div class="profile-social">
         
-          <aside id="sidebar">
-  
+    
+        
+            
+                <a href="mailto:12345@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/fi3ework" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
     
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li></ul>
     </div>
-  </div>
-
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
+    
+        <div class="friends">
+            <div>FRIENDS</div>
+            
+                
+                    <span>
+                        <a href= //www.baidu.com target="_black">friendA</a>
+                    </span>
+                
+            
+                
+                    <span>
+                        <a href= //www.google.com target="_black">friendB</a>
+                    </span>
+                
+            
+                
+            
+        </div>
+    
+    
+        <div class="about-me">
+            <a href = "/about" >ABOUT ME</a>
+        </div>
+    
+</div>
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
         
-          <li>
-            <a href="/2019/06/17/string.format/">(no title)</a>
-          </li>
+    
         
-          <li>
-            <a href="/2019/06/17/schedule/">(no title)</a>
-          </li>
+            
+                <a href="mailto:12345@qq.com" class="iconfont-archer email" title=email ></a>
+            
         
-          <li>
-            <a href="/2019/06/17/bash learning/">(no title)</a>
-          </li>
+    
         
-          <li>
-            <a href="/2019/06/17/defining python source code encodings/">(no title)</a>
-          </li>
+            
+                <a href="//github.com/fi3ework" class="iconfont-archer github" target="_blank" title=github></a>
+            
         
-          <li>
-            <a href="/2019/06/17/embeddable_python_install_module/">(no title)</a>
-          </li>
+    
         
-      </ul>
-    </div>
-  </div>
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 Jamoeba<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
-  </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+    
+     
+    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+    
+    </div>
+    
 </footer>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+    <!-- toc -->
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 7
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/06/17/schedule/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/06/17/string.format/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/embeddable_python_install_module/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/defining python source code encodings/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/bash learning/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/artificial_intelligence/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/hello-world/" >Hello World</a>
+        </li>
+    
+    </div>
   </div>
-</body>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "Jamoeba"
+    }
+</script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+    <!-- algolia -->
+    
+    <!-- busuanzi  -->
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+     
+    </body>
 </html>
+
+
