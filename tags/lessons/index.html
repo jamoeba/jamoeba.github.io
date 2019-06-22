@@ -78,6 +78,8 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -201,10 +203,8 @@
 </head>
 
     
-        <body class="home-body">
     
-    
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -220,34 +220,21 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Jamoeba's live blog.
-            <!-- 文章页  -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
-            
-            
-                it's better to burn out than to fade away
-            
-            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -359,115 +346,6 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/21/guizhencao/" >
-            
-                <span>guizhencao</span>
-        </a>
-        <div class="abstract-content">
-            鬼针草鬼针草也是小时候容易在树林里面粘在衣服上的小刺，比起苍耳草，鬼针草要烦人很多，刺散乱而且很难清理。
-for detail see: https://en.wikipedia.org/wiki/Bidens
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "plant">plant</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "interest">interest</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/21/canger/" >
-            
-                <span>苍耳</span>
-        </a>
-        <div class="abstract-content">
-            苍耳小时候在草地树林里玩，经常会有那种带刺的小球粘在衣服上，以前一直不知道叫什么，查过才知道叫做苍耳，这里做一个记录方便用来回忆。
-for detail see: https://en.wikipedia.org/wiki/Xanthium
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "plant">plant</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "interest">interest</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/19/click-style/" >
-            
-                <span>点击特效</span>
-        </a>
-        <div class="abstract-content">
-            
-
-
-    var a_idx = 0;
-    jQuery(document).ready(function($) {
-        $("body").click(function(e) {
-            var a = new Array("博学","审问","慎思","明辨","笃行");
-            var $i = $("").text(a[a_idx]);
-            a_idx = (a_idx + 1) % a.length;
-            var x = e.pageX,
-            y = e.pageY...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "js">js</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "html">html</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "特效">特效</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/2019/06/19/lesson/" >
             
                 <span>lesson</span>
@@ -520,257 +398,10 @@ web应用设计
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/18/schedule/" >
-            
-                <span>learning schedule</span>
-        </a>
-        <div class="abstract-content">
-            三个月学习计划安排：主攻：人工智能，数学，计算机相关原理涉及内容：机器学习各类主流算法的原理和实现、神经网络与深度学习的原理、设计及相关应用、高等数学全部内容、计算机相关原理（计算机组成原理、分布式计算、计算机网络原理、密码学、数字信号处理、图像识别、数据结构、操作系统）、数值计算、计算机系统结构、编译原理、软件工程、数据库原理、英语、python组件内容、linux相关操作粗拟计划：结合各高校招生安排，欲参与研究生、博士生招生录取，分析专研方向和学科，增长英语能力，大量阅读相关文献并且统一分类总结，留意相关技术活动，参与并留下成绩，最后有指向地进行对应大学的录取准备。在核心期刊上以第一...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/18</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/18/string.format/" >
-            
-                <span>string.format things</span>
-        </a>
-        <div class="abstract-content">
-            https://docs.python.org/3/library/string.html#string.Formatter
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/18</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/embeddable-python-install-module/" >
-            
-                <span>embeddable python install module</span>
-        </a>
-        <div class="abstract-content">
-            embeddable python是python官网提供的windows下使用的可移植python环境，因为集成度很高，所以在安装和添加组件的时候出很多问题
-总之解决方法是：目录下的“pythonXX._pth”中的“import site”取消注释，原文可参考官方文档
-Note that .pth files (without leading underscore) will be processed normally by the site module when import site has been specified.
-When no ._pth file is found,...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/defining-python-source-code-encodings/" >
-            
-                <span>python code encoding things</span>
-        </a>
-        <div class="abstract-content">
-            This paper used to introduce how python judge encoding from the filehttps://www.python.org/dev/peps/pep-0263/
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/bash-learning/" >
-            
-                <span>bash learning</span>
-        </a>
-        <div class="abstract-content">
-            In this post, some basic linux bash knowledge. Later I will take a full conclusion on it.
-https://www.cnblogs.com/vamei/p/8151169.html
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/artificial-intelligence/" >
-            
-                <span>artificial intelligence learning schedule</span>
-        </a>
-        <div class="abstract-content">
-            this used for mark ai learning schedule
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">NEXT &#62;</a>
-    </nav>
     
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/Misaka.jpg >
-    <div class="profile-name">Jamoeba</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:jamoeba@live.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/jamoeba" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title=wechat>
-                  
-                  <img class="profile-qr" src="/assets/example_qr.png" />
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href= //www.baidu.com target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.google.com target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">

@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Jamoeba&#39;s live blog</title>
+    <title>lesson · Jamoeba&#39;s live blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Jamoeba&#39;s live blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">lesson</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Jamoeba's live blog.</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Jamoeba's live blog.
-            <!-- 文章页  -->
+            lesson
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,49 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                it's better to burn out than to fade away
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "lessons">lessons</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">1.3k</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/06/19</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,426 +399,149 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/21/guizhencao/" >
-            
-                <span>guizhencao</span>
-        </a>
-        <div class="abstract-content">
-            鬼针草鬼针草也是小时候容易在树林里面粘在衣服上的小刺，比起苍耳草，鬼针草要烦人很多，刺散乱而且很难清理。
-for detail see: https://en.wikipedia.org/wiki/Bidens
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "plant">plant</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "interest">interest</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/21/canger/" >
-            
-                <span>苍耳</span>
-        </a>
-        <div class="abstract-content">
-            苍耳小时候在草地树林里玩，经常会有那种带刺的小球粘在衣服上，以前一直不知道叫什么，查过才知道叫做苍耳，这里做一个记录方便用来回忆。
-for detail see: https://en.wikipedia.org/wiki/Xanthium
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "plant">plant</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "interest">interest</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/19/click-style/" >
-            
-                <span>点击特效</span>
-        </a>
-        <div class="abstract-content">
-            
+            <main class="main post-page">
+    <article class="article-entry">
+        <ul>
+<li><a href="#高等数学">高等数学</a></li>
+<li><a href="#软件设计">软件设计</a></li>
+<li><a href="#电路与电子技术">电路与电子技术</a></li>
+<li><a href="#数字系统设计">数字系统设计</a></li>
+<li><a href="#数据结构与算法">数据结构与算法</a></li>
+<li><a href="#信号与系统">信号与系统</a></li>
+<li><a href="#计算机组成原理">计算机组成原理</a></li>
+<li><a href="#操作系统设计与实现">操作系统设计与实现</a></li>
+<li><a href="#通信原理与系统">通信原理与系统</a></li>
+<li><a href="#数字信号处理与控制">数字信号处理与控制</a></li>
+<li><a href="#算法设计">算法设计</a></li>
+<li><a href="#计算机网络原理">计算机网络原理</a></li>
+<li><a href="#web应用设计">web应用设计</a></li>
+<li><a href="#数据库系统">数据库系统</a></li>
+<li><a href="#人工智能">人工智能</a></li>
+<li><a href="#云计算应用开发">云计算应用开发</a></li>
+<li><a href="#移动应用开发">移动应用开发</a></li>
+<li><a href="#物联网技术导论">物联网技术导论</a></li>
+<li><a href="#嵌入式系统导论">嵌入式系统导论</a></li>
+<li><a href="#移动网络安全">移动网络安全</a></li>
+<li><a href="#射频识别原理与应用">射频识别原理与应用</a></li>
+</ul>
+<p>在学习之前需要做的事：<br><a href="https://www.jianshu.com/p/d6c29f714e9d" target="_blank" rel="noopener">如何阅读与学习英文教材</a></p>
+<h2 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h2><p>预计使用：8天</p>
+<p>高数使用同济大学第七版，附加概率论和线性代数。</p>
+<p>高数预计三天四天全面复习，习题晚上和雅思考题一起做。</p>
+<p>概率论和线性代数通读一遍预计使用四天，晚上偶尔看看习题。</p>
+<h2 id="软件设计"><a href="#软件设计" class="headerlink" title="软件设计"></a>软件设计</h2><p>预计使用时间：1天</p>
+<p>程序设计不是单独一本书或者一门课可以完全学习理解，需要多方面的知识融汇思考，打算花一天浏览一下书本内容，写下提纲，以供之后学习阅读。</p>
+<p>计算机程序的结构与解释</p>
+<p>abbrv. sicp structure and interpretation of computer programs</p>
+<p>position: <a href="https://sarabander.github.io/sicp/" target="_blank" rel="noopener">https://sarabander.github.io/sicp/</a> or /home/jamoeba/Documents/books/sicp/</p>
+<p>open course: <a href="https://www.bilibili.com/video/av8515129/index_1.html" target="_blank" rel="noopener">https://www.bilibili.com/video/av8515129/index_1.html</a></p>
+<p>计算机程序设计艺术</p>
+<p>abbrv. TAOCP the art of computer programming</p>
+<p>position： /Jingle’s Disk/Chinatelecom/learn/science/jw/the art of computer programming</p>
+<h2 id="电路与电子技术"><a href="#电路与电子技术" class="headerlink" title="电路与电子技术"></a>电路与电子技术</h2><p>预计时间：1天</p>
+<p>因为不是重要复习内容，可以稍微带过，使用《<em>电路与电子技术 （高等教育出版社2009年版图书）</em>》</p>
+<p>根据书列出提纲，总结要点，可不做习题</p>
+<h2 id="数字系统设计"><a href="#数字系统设计" class="headerlink" title="数字系统设计"></a>数字系统设计</h2><p>预计时间：2天</p>
+<p>主要内容复习CPU五级流水线设计</p>
+<p>还需要用书《<em>数字系统设计 （航空工业出版社图书）</em>》，根据书中内容概括知识点，着重了解知识点内容</p>
+<p>重要内容需要了解，五级流水线需要记得起原理图</p>
+<h2 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h2><p>预计时间：待定</p>
+<p>数据结构</p>
+<p>算法导论</p>
+<p><a href="https://www.jianshu.com/p/b3e03375fb7c" target="_blank" rel="noopener">https://www.jianshu.com/p/b3e03375fb7c</a></p>
+<p>可以参考其他人的教学重点复习，具体时间待定。</p>
+<p>需要一套相关题目</p>
+<p>平时需要跟着做codeforces里面的习题</p>
+<h2 id="信号与系统"><a href="#信号与系统" class="headerlink" title="信号与系统"></a>信号与系统</h2><p>预计时间：3天+3天+？</p>
+<p>最最最重要的就是傅立叶变换，然后是卷积，然后就是频域和时域的转化等等</p>
+<p>可以和数字系统处理与控制结合起来，看奥本海姆的两本书</p>
+<p>时间可能会比较长，如果高数没过关的话，所以高数一定要学扎实</p>
+<p>open course: <a href="http://open.163.com/special/opencourse/signals.html" target="_blank" rel="noopener">http://open.163.com/special/opencourse/signals.html</a></p>
+<h2 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h2><p>预计时间：5天+</p>
+<p>计算机数据编码</p>
+<p>机器指令，编址方式</p>
+<p>硬盘的读取</p>
+<p>需要根据书本学习，届时学习进行查找学习</p>
+<h2 id="操作系统设计与实现"><a href="#操作系统设计与实现" class="headerlink" title="操作系统设计与实现"></a>操作系统设计与实现</h2><p>预计时间：2天</p>
+<p>深入理解计算机系统</p>
+<p>通览全书，把重要知识点提取学习，回顾当初操作系统实验细节问题</p>
+<p>minix</p>
+<h2 id="通信原理与系统"><a href="#通信原理与系统" class="headerlink" title="通信原理与系统"></a>通信原理与系统</h2><p>预计时间：</p>
+<p>与数字信号处理与控制、信号与系统同时学习</p>
+<!-- todo: -->
 
 
-    var a_idx = 0;
-    jQuery(document).ready(function($) {
-        $("body").click(function(e) {
-            var a = new Array("博学","审问","慎思","明辨","笃行");
-            var $i = $("").text(a[a_idx]);
-            a_idx = (a_idx + 1) % a.length;
-            var x = e.pageX,
-            y = e.pageY...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "js">js</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "html">html</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "特效">特效</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/19/lesson/" >
-            
-                <span>lesson</span>
-        </a>
-        <div class="abstract-content">
-            
-高等数学
-软件设计
-电路与电子技术
-数字系统设计
-数据结构与算法
-信号与系统
-计算机组成原理
-操作系统设计与实现
-通信原理与系统
-数字信号处理与控制
-算法设计
-计算机网络原理
-web应用设计
-数据库系统
-人工智能
-云计算应用开发
-移动应用开发
-物联网技术导论
-嵌入式系统导论
-移动网络安全
-射频识别原理与应用
+<h2 id="数字信号处理与控制"><a href="#数字信号处理与控制" class="headerlink" title="数字信号处理与控制"></a>数字信号处理与控制</h2><p>预计时间：同信号与系统</p>
+<h2 id="算法设计"><a href="#算法设计" class="headerlink" title="算法设计"></a>算法设计</h2><p>似为与数据结构与算法设计相同</p>
+<h2 id="计算机网络原理"><a href="#计算机网络原理" class="headerlink" title="计算机网络原理"></a>计算机网络原理</h2><p>预计时间：4天</p>
+<p>把上课的讲义全部复习一遍，归纳重要知识点，将重要的协议背下来，重新完成当初的实验内容</p>
+<p>location: /Jingle’s Disk/Data/mystudy/2015-2016/2/computer networks</p>
+<h2 id="web应用设计"><a href="#web应用设计" class="headerlink" title="web应用设计"></a>web应用设计</h2><p>预计时间：不定</p>
+<p>web内容过多，涉及html、css、javascript、jsp等等，看后面按需学习</p>
+<h2 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h2><p>预计时间：2天</p>
+<p>根据课程讲义进行复习，尽量把书中重要内容复习，把重要内容背下来</p>
+<p>location: /Jingle’s Disk/Data/mystudy/2015-2016/2/Database-System</p>
+<h2 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h2><p>预计时间：14天</p>
+<p>重点复习内容需要把所有算法理解使用，后期尝试在这方面参加比赛，写论文</p>
+<p>其余时间需要留意相关论文，对相关论文需要通读并且写下读后感</p>
+<h2 id="云计算应用开发"><a href="#云计算应用开发" class="headerlink" title="云计算应用开发"></a>云计算应用开发</h2><p>预计时间：2天</p>
+<p>把docker、hadoop之类全部理解</p>
+<h2 id="移动应用开发"><a href="#移动应用开发" class="headerlink" title="移动应用开发"></a>移动应用开发</h2><p>预计时间：1天</p>
+<p>具体内容不用回忆了，只要把之前的代码看一下就行了，可以再写一篇关于二维码的文章</p>
+<h2 id="物联网技术导论"><a href="#物联网技术导论" class="headerlink" title="物联网技术导论"></a>物联网技术导论</h2><p>预计时间：3天</p>
+<p>联合移动应用开发和射频识别原理与应用，回顾当初那个项目，写一篇一维码的文章</p>
+<h2 id="嵌入式系统导论"><a href="#嵌入式系统导论" class="headerlink" title="嵌入式系统导论"></a>嵌入式系统导论</h2><p>预计时间：</p>
+<p>不是重点内容，后面按需看看是否要学</p>
+<h2 id="移动网络安全"><a href="#移动网络安全" class="headerlink" title="移动网络安全"></a>移动网络安全</h2><p>预计时间：3天</p>
+<p>把网络安全的知识点罗列出来，重要原理和算法需要记忆实践</p>
+<h2 id="射频识别原理与应用"><a href="#射频识别原理与应用" class="headerlink" title="射频识别原理与应用"></a>射频识别原理与应用</h2><p>预计时间：联合入物联网技术导论</p>
 
-在学习之前需要做的事：如何阅读与学习英文教材
-高等数学预计使用：8天
-高数使用同济大学第七版，附加概率论和线性代数。
-高数预计三天四天全面复习，习题晚上和雅思考题一起做。
-概率论和线性代数通读一遍预计使用四天，晚上偶尔看看习题。
-软件设计预计使用时间：1天
-程序设计不是单独一本书...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "lessons">lessons</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/18/schedule/" >
-            
-                <span>learning schedule</span>
-        </a>
-        <div class="abstract-content">
-            三个月学习计划安排：主攻：人工智能，数学，计算机相关原理涉及内容：机器学习各类主流算法的原理和实现、神经网络与深度学习的原理、设计及相关应用、高等数学全部内容、计算机相关原理（计算机组成原理、分布式计算、计算机网络原理、密码学、数字信号处理、图像识别、数据结构、操作系统）、数值计算、计算机系统结构、编译原理、软件工程、数据库原理、英语、python组件内容、linux相关操作粗拟计划：结合各高校招生安排，欲参与研究生、博士生招生录取，分析专研方向和学科，增长英语能力，大量阅读相关文献并且统一分类总结，留意相关技术活动，参与并留下成绩，最后有指向地进行对应大学的录取准备。在核心期刊上以第一...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://jamoeba.github.io">Jamoeba</a>
+            <p>原文链接：<a href="http://jamoeba.github.io/2019/06/19/lesson/">http://jamoeba.github.io/2019/06/19/lesson/</a>
+            <p>发表日期：<a href="http://jamoeba.github.io/2019/06/19/lesson/">June 19th 2019, 4:59:12 pm</a>
+            <p>更新日期：<a href="http://jamoeba.github.io/2019/06/19/lesson/">June 22nd 2019, 10:16:42 am</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/18</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/18/string.format/" >
-            
-                <span>string.format things</span>
-        </a>
-        <div class="abstract-content">
-            https://docs.python.org/3/library/string.html#string.Formatter
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/18</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/embeddable-python-install-module/" >
-            
-                <span>embeddable python install module</span>
-        </a>
-        <div class="abstract-content">
-            embeddable python是python官网提供的windows下使用的可移植python环境，因为集成度很高，所以在安装和添加组件的时候出很多问题
-总之解决方法是：目录下的“pythonXX._pth”中的“import site”取消注释，原文可参考官方文档
-Note that .pth files (without leading underscore) will be processed normally by the site module when import site has been specified.
-When no ._pth file is found,...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/defining-python-source-code-encodings/" >
-            
-                <span>python code encoding things</span>
-        </a>
-        <div class="abstract-content">
-            This paper used to introduce how python judge encoding from the filehttps://www.python.org/dev/peps/pep-0263/
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/bash-learning/" >
-            
-                <span>bash learning</span>
-        </a>
-        <div class="abstract-content">
-            In this post, some basic linux bash knowledge. Later I will take a full conclusion on it.
-https://www.cnblogs.com/vamei/p/8151169.html
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/artificial-intelligence/" >
-            
-                <span>artificial intelligence learning schedule</span>
-        </a>
-        <div class="abstract-content">
-            this used for mark ai learning schedule
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">NEXT &#62;</a>
-    </nav>
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/Misaka.jpg >
-    <div class="profile-name">Jamoeba</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2019/06/19/click-style/" title= "点击特效">
+                    <div class="nextTitle">点击特效</div>
+                </a>
             
-                <a href="mailto:jamoeba@live.com" class="iconfont-archer email" title=email ></a>
+        </li>
+        <li class="previous">
             
-        
-    
-        
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/06/18/schedule/" title= "learning schedule">
+                    <div class="prevTitle">learning schedule</div>
+                </a>
             
-                <a href="//github.com/jamoeba" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-        
-            
-                <span class="iconfont-archer wechat" title=wechat>
-                  
-                  <img class="profile-qr" src="/assets/example_qr.png" />
-                </span>
-            
-        
     
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href= //www.baidu.com target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.google.com target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -853,6 +624,24 @@ https://www.cnblogs.com/vamei/p/8151169.html
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#高等数学"><span class="toc-number">1.</span> <span class="toc-text">高等数学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件设计"><span class="toc-number">2.</span> <span class="toc-text">软件设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电路与电子技术"><span class="toc-number">3.</span> <span class="toc-text">电路与电子技术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数字系统设计"><span class="toc-number">4.</span> <span class="toc-text">数字系统设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据结构与算法"><span class="toc-number">5.</span> <span class="toc-text">数据结构与算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信号与系统"><span class="toc-number">6.</span> <span class="toc-text">信号与系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机组成原理"><span class="toc-number">7.</span> <span class="toc-text">计算机组成原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作系统设计与实现"><span class="toc-number">8.</span> <span class="toc-text">操作系统设计与实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通信原理与系统"><span class="toc-number">9.</span> <span class="toc-text">通信原理与系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数字信号处理与控制"><span class="toc-number">10.</span> <span class="toc-text">数字信号处理与控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法设计"><span class="toc-number">11.</span> <span class="toc-text">算法设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机网络原理"><span class="toc-number">12.</span> <span class="toc-text">计算机网络原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web应用设计"><span class="toc-number">13.</span> <span class="toc-text">web应用设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库系统"><span class="toc-number">14.</span> <span class="toc-text">数据库系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#人工智能"><span class="toc-number">15.</span> <span class="toc-text">人工智能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云计算应用开发"><span class="toc-number">16.</span> <span class="toc-text">云计算应用开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动应用开发"><span class="toc-number">17.</span> <span class="toc-text">移动应用开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#物联网技术导论"><span class="toc-number">18.</span> <span class="toc-text">物联网技术导论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#嵌入式系统导论"><span class="toc-number">19.</span> <span class="toc-text">嵌入式系统导论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动网络安全"><span class="toc-number">20.</span> <span class="toc-text">移动网络安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#射频识别原理与应用"><span class="toc-number">21.</span> <span class="toc-text">射频识别原理与应用</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1169,6 +958,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
