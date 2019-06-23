@@ -500,49 +500,6 @@ for detail see: https://en.wikipedia.org/wiki/Xanthium
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/19/click-style/" >
-            
-                <span>点击特效</span>
-        </a>
-        <div class="abstract-content">
-            
-
-
-    var a_idx = 0;
-    jQuery(document).ready(function($) {
-        $("body").click(function(e) {
-            var a = new Array("博学","审问","慎思","明辨","笃行");
-            var $i = $("").text(a[a_idx]);
-            a_idx = (a_idx + 1) % a.length;
-            var x = e.pageX,
-            y = e.pageY...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "js">js</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "html">html</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "特效">特效</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/2019/06/19/lesson/" >
             
                 <span>lesson</span>
@@ -602,6 +559,49 @@ extra
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/19/click-style/" >
+            
+                <span>点击特效</span>
+        </a>
+        <div class="abstract-content">
+            
+
+
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("博学","审问","慎思","明辨","笃行");
+            var $i = $("").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "js">js</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "html">html</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "特效">特效</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/06/18/string.format/" >
             
                 <span>string.format things</span>
@@ -649,14 +649,15 @@ extra
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/bash-learning/" >
+        <a class="abstract-title" href = "/2019/06/17/embeddable-python-install-module/" >
             
-                <span>bash learning</span>
+                <span>embeddable python install module</span>
         </a>
         <div class="abstract-content">
-            In this post, some basic linux bash knowledge. Later I will take a full conclusion on it.
-https://www.cnblogs.com/vamei/p/8151169.html
-
+            embeddable python是python官网提供的windows下使用的可移植python环境，因为集成度很高，所以在安装和添加组件的时候出很多问题
+总之解决方法是：目录下的“pythonXX._pth”中的“import site”取消注释，原文可参考官方文档
+Note that .pth files (without leading underscore) will be processed normally by the site module when import site has been specified.
+When no ._pth file is found,...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -674,15 +675,13 @@ https://www.cnblogs.com/vamei/p/8151169.html
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/embeddable-python-install-module/" >
+        <a class="abstract-title" href = "/2019/06/17/defining-python-source-code-encodings/" >
             
-                <span>embeddable python install module</span>
+                <span>python code encoding things</span>
         </a>
         <div class="abstract-content">
-            embeddable python是python官网提供的windows下使用的可移植python环境，因为集成度很高，所以在安装和添加组件的时候出很多问题
-总之解决方法是：目录下的“pythonXX._pth”中的“import site”取消注释，原文可参考官方文档
-Note that .pth files (without leading underscore) will be processed normally by the site module when import site has been specified.
-When no ._pth file is found,...
+            This paper used to introduce how python judge encoding from the filehttps://www.python.org/dev/peps/pep-0263/
+
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -1023,16 +1022,6 @@ When no ._pth file is found,...
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 13
@@ -1071,12 +1060,12 @@ When no ._pth file is found,...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/lesson/" >lesson</a>
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/click-style/" >点击特效</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/click-style/" >点击特效</a>
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/lesson/" >lesson</a>
         </li>
     
     
@@ -1091,17 +1080,17 @@ When no ._pth file is found,...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/bash-learning/" >bash learning</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/defining-python-source-code-encodings/" >python code encoding things</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/embeddable-python-install-module/" >embeddable python install module</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/bash-learning/" >bash learning</a>
         </li>
     
     
@@ -1119,15 +1108,15 @@ When no ._pth file is found,...
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="plant"><span class="iconfont-archer">&#xe606;</span>plant</span>
-    
-        <span class="sidebar-tag-name" data-tags="interest"><span class="iconfont-archer">&#xe606;</span>interest</span>
-    
         <span class="sidebar-tag-name" data-tags="js"><span class="iconfont-archer">&#xe606;</span>js</span>
     
         <span class="sidebar-tag-name" data-tags="html"><span class="iconfont-archer">&#xe606;</span>html</span>
     
         <span class="sidebar-tag-name" data-tags="特效"><span class="iconfont-archer">&#xe606;</span>特效</span>
+    
+        <span class="sidebar-tag-name" data-tags="plant"><span class="iconfont-archer">&#xe606;</span>plant</span>
+    
+        <span class="sidebar-tag-name" data-tags="interest"><span class="iconfont-archer">&#xe606;</span>interest</span>
     
         <span class="sidebar-tag-name" data-tags="lessons"><span class="iconfont-archer">&#xe606;</span>lessons</span>
     
