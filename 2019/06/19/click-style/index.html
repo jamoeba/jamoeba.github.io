@@ -442,8 +442,10 @@ height:50vh;
 
 <p>添加下面代码就能出现点击特效</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> a_idx = <span class="number">0</span>;</span><br><span class="line">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">        $(<span class="string">"body"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"博学"</span>,<span class="string">"审问"</span>,<span class="string">"慎思"</span>,<span class="string">"明辨"</span>,<span class="string">"笃行"</span>);</span><br><span class="line">            <span class="keyword">var</span> $i = $(<span class="string">"&lt;span/&gt;"</span>).text(a[a_idx]);</span><br><span class="line">            a_idx = (a_idx + <span class="number">1</span>) % a.length;</span><br><span class="line">            <span class="keyword">var</span> x = e.pageX,</span><br><span class="line">            y = e.pageY;</span><br><span class="line">            $i.css(&#123;</span><br><span class="line">                <span class="string">"z-index"</span>: <span class="number">5</span>,</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">20</span>,</span><br><span class="line">                <span class="string">"left"</span>: x,</span><br><span class="line">                <span class="string">"position"</span>: <span class="string">"absolute"</span>,</span><br><span class="line">                <span class="string">"font-weight"</span>: <span class="string">"bold"</span>,</span><br><span class="line">                <span class="string">"color"</span>: <span class="string">"#ff6651"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            $(<span class="string">"body"</span>).append($i);</span><br><span class="line">            $i.animate(&#123;</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">180</span>,</span><br><span class="line">                <span class="string">"opacity"</span>: <span class="number">0</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="number">1500</span>,</span><br><span class="line">            <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                $i.remove();</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>但是不要忘了添加Jquery</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
 <p>里面的z-index是html的显示层级，可以根据要求设置成页面的顶端，即将数字填大，但是有的浏览器如果数字太大会出现错误导致错误，一般在<strong>-2147483647～2147483648</strong>之间</p>
 
     </article>
@@ -812,12 +814,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2019/06/21/canger/" >苍耳</a>
+            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2019/06/21/guizhencao/" >鬼针草</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2019/06/21/guizhencao/" >鬼针草</a>
+            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2019/06/21/canger/" >苍耳</a>
         </li>
     
     
@@ -842,7 +844,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/bash-learning/" >bash learning</a>
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/embeddable-python-install-module/" >embeddable python install module</a>
         </li>
     
     
@@ -852,7 +854,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/embeddable-python-install-module/" >embeddable python install module</a>
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/bash-learning/" >bash learning</a>
         </li>
     
     
@@ -880,11 +882,11 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="特效"><span class="iconfont-archer">&#xe606;</span>特效</span>
     
-        <span class="sidebar-tag-name" data-tags="lessons"><span class="iconfont-archer">&#xe606;</span>lessons</span>
+        <span class="sidebar-tag-name" data-tags="codeforces"><span class="iconfont-archer">&#xe606;</span>codeforces</span>
     
         <span class="sidebar-tag-name" data-tags="private"><span class="iconfont-archer">&#xe606;</span>private</span>
     
-        <span class="sidebar-tag-name" data-tags="codeforces"><span class="iconfont-archer">&#xe606;</span>codeforces</span>
+        <span class="sidebar-tag-name" data-tags="lessons"><span class="iconfont-archer">&#xe606;</span>lessons</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

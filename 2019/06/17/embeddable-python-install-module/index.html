@@ -400,7 +400,7 @@ height:50vh;
         <p>embeddable python是python官网提供的windows下使用的可移植python环境，因为集成度很高，所以在安装和添加组件的时候出很多问题</p>
 <p>总之解决方法是：<br>目录下的“pythonXX._pth”中的“import site”取消注释，原文可参考官方文档</p>
 <p>Note that .pth files (without leading underscore) will be processed normally by the site module when import site has been specified.</p>
-<p>When no ._pth file is found, this is how sys.path is populated on Windows:<br>•An empty entry is added at the start, which corresponds to the current directory.<br>•If the environment variable PYTHONPATH exists, as described in Environment variables, its entries are added next. Note that on Windows, paths in this variable must be separated by semicolons, to distinguish them from the colon used in drive identifiers (C: etc.).<br>•Additional “application paths” can be added in the registry as subkeys of \SOFTWARE\Python\PythonCore{version}\PythonPath under both the HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE hives. Subkeys which have semicolon-delimited path strings as their default value will cause each path to be added to sys.path. (Note that all known installers only use HKLM, so HKCU is typically empty.)<br>•If the environment variable PYTHONHOME is set, it is assumed as “Python Home”. Otherwise, the path of the main Python executable is used to locate a “landmark file” (either Lib\os.py or pythonXY.zip) to deduce the “Python Home”. If a Python home is found, the relevant sub-directories added to sys.path (Lib, plat-win, etc) are based on that folder. Otherwise, the core Python path is constructed from the PythonPath stored in the registry.<br>•If the Python Home cannot be located, no PYTHONPATH is specified in the environment, and no registry entries can be found, a default path with relative entries is used (e.g. .\Lib;.\plat-win, etc).</p>
+<p>When no ._pth file is found, this is how sys.path is populated on Windows:<br>•An empty entry is added at the start, which corresponds to the current directory.<br>•If the environment variable PYTHONPATH exists, as described in Environment variables, its entries are added next. Note that on Windows, paths in this variable must be separated by semicolons, to distinguish them from the colon used in drive identifiers (C:\ etc.).<br>•Additional “application paths” can be added in the registry as subkeys of \SOFTWARE\Python\PythonCore{version}\PythonPath under both the HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE hives. Subkeys which have semicolon-delimited path strings as their default value will cause each path to be added to sys.path. (Note that all known installers only use HKLM, so HKCU is typically empty.)<br>•If the environment variable PYTHONHOME is set, it is assumed as “Python Home”. Otherwise, the path of the main Python executable is used to locate a “landmark file” (either Lib\os.py or pythonXY.zip) to deduce the “Python Home”. If a Python home is found, the relevant sub-directories added to sys.path (Lib, plat-win, etc) are based on that folder. Otherwise, the core Python path is constructed from the PythonPath stored in the registry.<br>•If the Python Home cannot be located, no PYTHONPATH is specified in the environment, and no registry entries can be found, a default path with relative entries is used (e.g. .\Lib;.\plat-win, etc).</p>
 
     </article>
     <!-- license  -->
@@ -418,16 +418,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/06/18/schedule/" title= "learning schedule">
-                    <div class="nextTitle">learning schedule</div>
+                <a href= "/2019/06/17/bash-learning/" title= "bash learning">
+                    <div class="nextTitle">bash learning</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/06/17/defining-python-source-code-encodings/" title= "python code encoding things">
-                    <div class="prevTitle">python code encoding things</div>
+                <a href= "/2019/06/17/artificial-intelligence/" title= "artificial intelligence learning schedule">
+                    <div class="prevTitle">artificial intelligence learning schedule</div>
                 </a>
             
         </li>
@@ -768,12 +768,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2019/06/21/canger/" >苍耳</a>
+            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2019/06/21/guizhencao/" >鬼针草</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2019/06/21/guizhencao/" >鬼针草</a>
+            <span class="archive-post-date">06/21</span><a class="archive-post-title" href= "/2019/06/21/canger/" >苍耳</a>
         </li>
     
     
@@ -798,7 +798,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/bash-learning/" >bash learning</a>
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/embeddable-python-install-module/" >embeddable python install module</a>
         </li>
     
     
@@ -808,7 +808,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/embeddable-python-install-module/" >embeddable python install module</a>
+            <span class="archive-post-date">06/17</span><a class="archive-post-title" href= "/2019/06/17/bash-learning/" >bash learning</a>
         </li>
     
     
@@ -836,11 +836,11 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="特效"><span class="iconfont-archer">&#xe606;</span>特效</span>
     
-        <span class="sidebar-tag-name" data-tags="lessons"><span class="iconfont-archer">&#xe606;</span>lessons</span>
+        <span class="sidebar-tag-name" data-tags="codeforces"><span class="iconfont-archer">&#xe606;</span>codeforces</span>
     
         <span class="sidebar-tag-name" data-tags="private"><span class="iconfont-archer">&#xe606;</span>private</span>
     
-        <span class="sidebar-tag-name" data-tags="codeforces"><span class="iconfont-archer">&#xe606;</span>codeforces</span>
+        <span class="sidebar-tag-name" data-tags="lessons"><span class="iconfont-archer">&#xe606;</span>lessons</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
