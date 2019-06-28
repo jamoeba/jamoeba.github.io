@@ -11,7 +11,7 @@
 
 
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="author" content="Jamoeba">
     <meta name="renderer" content="webkit">
@@ -23,6 +23,8 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Jamoeba&#39;s live blog</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -196,7 +198,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
     <!-- 百度统计  -->
     
-    <!-- 谷歌统计  -->
+    <!-- 谷歌统计  --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 </head>
 
@@ -204,7 +206,7 @@
         <body class="home-body">
     
     
-<header class="header index-header">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -359,13 +361,39 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/22/codeforces#569(Div.2)/" >
+        <a class="abstract-title" href = "/2019/06/25/math/" >
             
-                <span>codeforces#569(Div.2)</span>
+                <span>math</span>
+        </a>
+        <div class="abstract-content">
+            第一章 函数与极限映射概念映射、满射、单射、一一映射、算子、泛函、变换、函数
+映射：一般记作$f:X \rightarrow Y$，$X$是定义域，$Y$是值域的范围，$x \in X, y \in Y , y=f(x)$，把$y$称为元素$x$在映射$f$下的像，把$x$称为元素$y$在映射$f$下的原像，定义域记作$D_{f}$，即有$D_{f} = X$，值域记作$R_{f}$，即有$R_{f} \subset Y$
+满射：$Y$中任意元素$y$都是X中某元素的像，则称$f$为$X$到$Y$上的映射或满射
+单射：$X$中任意两个不同元素$x_1 \neq x_2$，他们的像$f(x...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/25</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/22/codeforces569(Div.2)/" >
+            
+                <span>codeforces569(Div.2)</span>
         </a>
         <div class="abstract-content">
             only finish 3 problems
-
+i can’t get the reason why cannot access this post
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -375,6 +403,8 @@ height:50vh;
             <!-- tags  -->
             
             <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "private">private</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "codeforces">codeforces</a>
     
@@ -407,8 +437,8 @@ height:50vh;
 Carnegie Mellon University
 Massachusetts Institute of Technology
 Stanford University
-University of California–Berkeley
-University of Illinois–Urbana-Champaign
+University of California—Berkeley
+University of Illinois—Urbana-Champaign
 Cornell University
 University ...
         </div>
@@ -500,6 +530,49 @@ for detail see: https://en.wikipedia.org/wiki/Xanthium
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/19/click-style/" >
+            
+                <span>点击特效</span>
+        </a>
+        <div class="abstract-content">
+            
+
+
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("博学","审问","慎思","明辨","笃行");
+            var $i = $("").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "js">js</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "html">html</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "特效">特效</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/06/19/lesson/" >
             
                 <span>lesson</span>
@@ -534,8 +607,8 @@ extra
 高数使用同济大学第七版，附加概率论和线性代数。
 高数预计三天四天全面复习，习题晚上和雅思考题一起做。
 概率论和线性代数通读一遍预计使用四天，晚上偶尔看看习题。
-软件设计预计使用时间：1天
-程序设计不...
+start: jun 26
+软件设计预...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -547,49 +620,6 @@ extra
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "lessons">lessons</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/19/click-style/" >
-            
-                <span>点击特效</span>
-        </a>
-        <div class="abstract-content">
-            
-
-
-    var a_idx = 0;
-    jQuery(document).ready(function($) {
-        $("body").click(function(e) {
-            var a = new Array("博学","审问","慎思","明辨","笃行");
-            var $i = $("").text(a[a_idx]);
-            a_idx = (a_idx + 1) % a.length;
-            var x = e.pageX,
-            y = e.pageY...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "js">js</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "html">html</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "特效">特效</a>
     
 </div>
             
@@ -658,30 +688,6 @@ extra
 总之解决方法是：目录下的“pythonXX._pth”中的“import site”取消注释，原文可参考官方文档
 Note that .pth files (without leading underscore) will be processed normally by the site module when import site has been specified.
 When no ._pth file is found,...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/06/17/defining-python-source-code-encodings/" >
-            
-                <span>python code encoding things</span>
-        </a>
-        <div class="abstract-content">
-            This paper used to introduce how python judge encoding from the filehttps://www.python.org/dev/peps/pep-0263/
-
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -1022,9 +1028,54 @@ When no ._pth file is found,...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 13
+        Total : 14
         </div>
         <!-- search  -->
         
@@ -1040,7 +1091,12 @@ When no ._pth file is found,...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/22</span><a class="archive-post-title" href= "/2019/06/22/codeforces#569(Div.2)/" >codeforces#569(Div.2)</a>
+            <span class="archive-post-date">06/25</span><a class="archive-post-title" href= "/2019/06/25/math/" >math</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/22</span><a class="archive-post-title" href= "/2019/06/22/codeforces569(Div.2)/" >codeforces569(Div.2)</a>
         </li>
     
     
@@ -1060,12 +1116,12 @@ When no ._pth file is found,...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/click-style/" >点击特效</a>
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/lesson/" >lesson</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/lesson/" >lesson</a>
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/2019/06/19/click-style/" >点击特效</a>
         </li>
     
     
@@ -1108,15 +1164,15 @@ When no ._pth file is found,...
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="plant"><span class="iconfont-archer">&#xe606;</span>plant</span>
+    
+        <span class="sidebar-tag-name" data-tags="interest"><span class="iconfont-archer">&#xe606;</span>interest</span>
+    
         <span class="sidebar-tag-name" data-tags="js"><span class="iconfont-archer">&#xe606;</span>js</span>
     
         <span class="sidebar-tag-name" data-tags="html"><span class="iconfont-archer">&#xe606;</span>html</span>
     
         <span class="sidebar-tag-name" data-tags="特效"><span class="iconfont-archer">&#xe606;</span>特效</span>
-    
-        <span class="sidebar-tag-name" data-tags="plant"><span class="iconfont-archer">&#xe606;</span>plant</span>
-    
-        <span class="sidebar-tag-name" data-tags="interest"><span class="iconfont-archer">&#xe606;</span>interest</span>
     
         <span class="sidebar-tag-name" data-tags="lessons"><span class="iconfont-archer">&#xe606;</span>lessons</span>
     
@@ -1221,7 +1277,22 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
 </html>
 
 
