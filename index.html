@@ -412,7 +412,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-07-01 12:36:31" itemprop="dateModified" datetime="2019-07-01T12:36:31+08:00">2019-07-01</time>
+                <time title="Modified: 2019-07-01 13:34:04" itemprop="dateModified" datetime="2019-07-01T13:34:04+08:00">2019-07-01</time>
               
             
           </span>
@@ -448,8 +448,8 @@
       
         
           
-            <h2 id="第一章-函数与极限"><a href="#第一章-函数与极限" class="headerlink" title="第一章 函数与极限"></a>第一章 函数与极限</h2><h3 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>映射、满射、单射、一一映射、算子、泛函、变换、函数</p>
-<p>映射：一般记作$f:X \rightarrow Y$，$X$是定义域，$Y$是值域的范围，$x \in X, y \in Y , y=f(x)$，把$y$称为元素$x$在映射$f$下的像，把$x$称为元素$y$在映射$f$下的原像，定义域记作$D<em>{f}$，即有$D</em>{f} = X$，值域记作$R<em>{f}$，即有$R</em>{f} \subset Y$</p>
+            <script type="math/tex; mode=display">\mathcal{C}\phi \delta e \mathfrak{M}\alpha th \mathit{I}n \mathcal{H}ex\sigma \mathbb{N}o\omega!</script><h2 id="第一章-函数与极限"><a href="#第一章-函数与极限" class="headerlink" title="第一章 函数与极限"></a>第一章 函数与极限</h2><h3 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>映射、满射、单射、一一映射、算子、泛函、变换、函数</p>
+<p>映射：一般记作$f:X \rightarrow Y$，$X$是定义域，$Y$是值域的范围，$x \in X, y \in Y , y=f(x)$，把$y$称为元素$x$在映射$f$下的像，把$x$称为元素$y$在映射$f$下的原像，定义域记作$D_{f}$，即有$D_{f} = X$，值域记作$R_{f}$，即有$R_{f} \subset Y$</p>
 <p>满射：$Y$中任意元素$y$都是X中某元素的像，则称$f$为$X$到$Y$上的映射或满射</p>
 <p>单射：$X$中任意两个不同元素$x_1 \neq x_2$，他们的像$f(x_1) \neq f(x_2)$则称$f$为$X$到$Y$的单射</p>
 <p>一一映射：既满足满射又满足单射的映射称为一一映射</p>
@@ -1182,6 +1182,186 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jamoeba.github.io/2019/06/19/click-style/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jamoeba">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jamoeba's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/19/click-style/" class="post-title-link" itemprop="url">点击特效</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-19 16:59:12 / Modified: 22:28:31" itemprop="dateCreated datePublished" datetime="2019-06-19T16:59:12+08:00">2019-06-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("博学","审问","慎思","明辨","笃行");
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY;
+            $i.css({
+                "z-index": 5,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "#ff6651"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            1500,
+            function() {
+                $i.remove();
+            });
+        });
+    });
+</script>
+
+
+<p>添加下面代码就能出现点击特效</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> a_idx = <span class="number">0</span>;</span><br><span class="line">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">        $(<span class="string">"body"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"博学"</span>,<span class="string">"审问"</span>,<span class="string">"慎思"</span>,<span class="string">"明辨"</span>,<span class="string">"笃行"</span>);</span><br><span class="line">            <span class="keyword">var</span> $i = $(<span class="string">"&lt;span/&gt;"</span>).text(a[a_idx]);</span><br><span class="line">            a_idx = (a_idx + <span class="number">1</span>) % a.length;</span><br><span class="line">            <span class="keyword">var</span> x = e.pageX,</span><br><span class="line">            y = e.pageY;</span><br><span class="line">            $i.css(&#123;</span><br><span class="line">                <span class="string">"z-index"</span>: <span class="number">5</span>,</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">20</span>,</span><br><span class="line">                <span class="string">"left"</span>: x,</span><br><span class="line">                <span class="string">"position"</span>: <span class="string">"absolute"</span>,</span><br><span class="line">                <span class="string">"font-weight"</span>: <span class="string">"bold"</span>,</span><br><span class="line">                <span class="string">"color"</span>: <span class="string">"#ff6651"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            $(<span class="string">"body"</span>).append($i);</span><br><span class="line">            $i.animate(&#123;</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">180</span>,</span><br><span class="line">                <span class="string">"opacity"</span>: <span class="number">0</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="number">1500</span>,</span><br><span class="line">            <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                $i.remove();</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>但是不要忘了添加Jquery</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>里面的z-index是html的显示层级，可以根据要求设置成页面的顶端，即将数字填大，但是有的浏览器如果数字太大会出现错误导致错误，一般在<strong>-2147483647～2147483648</strong>之间</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://jamoeba.github.io/2019/06/19/lesson/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1378,186 +1558,6 @@
 <p>gre</p>
 <p>neea id： 71536341</p>
 <p>IELTS toefl</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jamoeba.github.io/2019/06/19/click-style/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jamoeba">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jamoeba's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/19/click-style/" class="post-title-link" itemprop="url">点击特效</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-06-19 16:59:12 / Modified: 22:28:31" itemprop="dateCreated datePublished" datetime="2019-06-19T16:59:12+08:00">2019-06-19</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-    var a_idx = 0;
-    jQuery(document).ready(function($) {
-        $("body").click(function(e) {
-            var a = new Array("博学","审问","慎思","明辨","笃行");
-            var $i = $("<span/>").text(a[a_idx]);
-            a_idx = (a_idx + 1) % a.length;
-            var x = e.pageX,
-            y = e.pageY;
-            $i.css({
-                "z-index": 5,
-                "top": y - 20,
-                "left": x,
-                "position": "absolute",
-                "font-weight": "bold",
-                "color": "#ff6651"
-            });
-            $("body").append($i);
-            $i.animate({
-                "top": y - 180,
-                "opacity": 0
-            },
-            1500,
-            function() {
-                $i.remove();
-            });
-        });
-    });
-</script>
-
-
-<p>添加下面代码就能出现点击特效</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> a_idx = <span class="number">0</span>;</span><br><span class="line">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">        $(<span class="string">"body"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"博学"</span>,<span class="string">"审问"</span>,<span class="string">"慎思"</span>,<span class="string">"明辨"</span>,<span class="string">"笃行"</span>);</span><br><span class="line">            <span class="keyword">var</span> $i = $(<span class="string">"&lt;span/&gt;"</span>).text(a[a_idx]);</span><br><span class="line">            a_idx = (a_idx + <span class="number">1</span>) % a.length;</span><br><span class="line">            <span class="keyword">var</span> x = e.pageX,</span><br><span class="line">            y = e.pageY;</span><br><span class="line">            $i.css(&#123;</span><br><span class="line">                <span class="string">"z-index"</span>: <span class="number">5</span>,</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">20</span>,</span><br><span class="line">                <span class="string">"left"</span>: x,</span><br><span class="line">                <span class="string">"position"</span>: <span class="string">"absolute"</span>,</span><br><span class="line">                <span class="string">"font-weight"</span>: <span class="string">"bold"</span>,</span><br><span class="line">                <span class="string">"color"</span>: <span class="string">"#ff6651"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            $(<span class="string">"body"</span>).append($i);</span><br><span class="line">            $i.animate(&#123;</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">180</span>,</span><br><span class="line">                <span class="string">"opacity"</span>: <span class="number">0</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="number">1500</span>,</span><br><span class="line">            <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                $i.remove();</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>但是不要忘了添加Jquery</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>里面的z-index是html的显示层级，可以根据要求设置成页面的顶端，即将数字填大，但是有的浏览器如果数字太大会出现错误导致错误，一般在<strong>-2147483647～2147483648</strong>之间</p>
 
           
         
@@ -2083,7 +2083,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jamoeba.github.io/2019/06/17/bash-learning/">
+    <link itemprop="mainEntityOfPage" href="http://jamoeba.github.io/2019/06/17/defining-python-source-code-encodings/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jamoeba">
@@ -2103,7 +2103,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/17/bash-learning/" class="post-title-link" itemprop="url">bash learning</a>
+                <a href="/2019/06/17/defining-python-source-code-encodings/" class="post-title-link" itemprop="url">python code encoding things</a>
               
             
           </h1>
@@ -2128,7 +2128,7 @@
                 
               
 
-              <time title="Created: 2019-06-17 17:27:54 / Modified: 21:09:11" itemprop="dateCreated datePublished" datetime="2019-06-17T17:27:54+08:00">2019-06-17</time>
+              <time title="Created: 2019-06-17 17:27:54 / Modified: 21:09:26" itemprop="dateCreated datePublished" datetime="2019-06-17T17:27:54+08:00">2019-06-17</time>
             
 
             
@@ -2169,8 +2169,7 @@
       
         
           
-            <p>In this post, some basic linux bash knowledge. Later I will take a full conclusion on it.</p>
-<p><a href="https://www.cnblogs.com/vamei/p/8151169.html" target="_blank" rel="noopener">https://www.cnblogs.com/vamei/p/8151169.html</a></p>
+            <p>This paper used to introduce how python judge encoding from the file<br><a href="https://www.python.org/dev/peps/pep-0263/" target="_blank" rel="noopener">https://www.python.org/dev/peps/pep-0263/</a></p>
 
           
         
