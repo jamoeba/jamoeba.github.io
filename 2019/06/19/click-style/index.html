@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="var a_idx = 0;     jQuery(document).ready(function($) {         $(&quot;body&quot;).click(function(e) {             var a = new Array(&quot;博学&quot;,&quot;审问&quot;,&quot;慎思&quot;,&quot;明辨&quot;,&quot;笃行&quot;);             var $i = $(&quot;&quot;).text(a[a_idx]);">
+  <meta name="description" content="添加下面代码就能出现点击特效">
 <meta name="keywords" content="js,html,特效">
 <meta property="og:type" content="article">
 <meta property="og:title" content="点击特效">
 <meta property="og:url" content="http://jamoeba.github.io/2019/06/19/click-style/index.html">
 <meta property="og:site_name" content="Jamoeba&#39;s blog">
-<meta property="og:description" content="var a_idx = 0;     jQuery(document).ready(function($) {         $(&quot;body&quot;).click(function(e) {             var a = new Array(&quot;博学&quot;,&quot;审问&quot;,&quot;慎思&quot;,&quot;明辨&quot;,&quot;笃行&quot;);             var $i = $(&quot;&quot;).text(a[a_idx]);">
+<meta property="og:description" content="添加下面代码就能出现点击特效">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-19T14:28:31.615Z">
+<meta property="og:updated_time" content="2019-07-01T06:41:33.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="点击特效">
-<meta name="twitter:description" content="var a_idx = 0;     jQuery(document).ready(function($) {         $(&quot;body&quot;).click(function(e) {             var a = new Array(&quot;博学&quot;,&quot;审问&quot;,&quot;慎思&quot;,&quot;明辨&quot;,&quot;笃行&quot;);             var $i = $(&quot;&quot;).text(a[a_idx]);">
+<meta name="twitter:description" content="添加下面代码就能出现点击特效">
 
 
 
@@ -397,12 +397,24 @@
                 
               
 
-              <time title="Created: 2019-06-19 16:59:12 / Modified: 22:28:31" itemprop="dateCreated datePublished" datetime="2019-06-19T16:59:12+08:00">2019-06-19</time>
+              <time title="Created: 2019-06-19 16:59:12" itemprop="dateCreated datePublished" datetime="2019-06-19T16:59:12+08:00">2019-06-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-01 14:41:33" itemprop="dateModified" datetime="2019-07-01T14:41:33+08:00">2019-07-01</time>
               
             
           </span>
@@ -436,7 +448,11 @@
       
 
       
-        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+        <p>添加下面代码就能出现点击特效<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> a_idx = <span class="number">0</span>;</span><br><span class="line">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">        $(<span class="string">"body"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"博学"</span>,<span class="string">"审问"</span>,<span class="string">"慎思"</span>,<span class="string">"明辨"</span>,<span class="string">"笃行"</span>);</span><br><span class="line">            <span class="keyword">var</span> $i = $(<span class="string">"&lt;span/&gt;"</span>).text(a[a_idx]);</span><br><span class="line">            a_idx = (a_idx + <span class="number">1</span>) % a.length;</span><br><span class="line">            <span class="keyword">var</span> x = e.pageX,</span><br><span class="line">            y = e.pageY;</span><br><span class="line">            $i.css(&#123;</span><br><span class="line">                <span class="string">"z-index"</span>: <span class="number">5</span>,</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">20</span>,</span><br><span class="line">                <span class="string">"left"</span>: x,</span><br><span class="line">                <span class="string">"position"</span>: <span class="string">"absolute"</span>,</span><br><span class="line">                <span class="string">"font-weight"</span>: <span class="string">"bold"</span>,</span><br><span class="line">                <span class="string">"color"</span>: <span class="string">"#ff6651"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            $(<span class="string">"body"</span>).append($i);</span><br><span class="line">            $i.animate(&#123;</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">180</span>,</span><br><span class="line">                <span class="string">"opacity"</span>: <span class="number">0</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="number">1500</span>,</span><br><span class="line">            <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                $i.remove();</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>但是不要忘了添加Jquery</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>里面的z-index是html的显示层级，可以根据要求设置成页面的顶端，即将数字填大，但是有的浏览器如果数字太大会出现错误导致错误，一般在<strong>-2147483647～2147483648</strong>之间</p>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 
 <script type="text/javascript">
     var a_idx = 0;
@@ -467,14 +483,6 @@
         });
     });
 </script>
-
-
-<p>添加下面代码就能出现点击特效</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> a_idx = <span class="number">0</span>;</span><br><span class="line">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">        $(<span class="string">"body"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"博学"</span>,<span class="string">"审问"</span>,<span class="string">"慎思"</span>,<span class="string">"明辨"</span>,<span class="string">"笃行"</span>);</span><br><span class="line">            <span class="keyword">var</span> $i = $(<span class="string">"&lt;span/&gt;"</span>).text(a[a_idx]);</span><br><span class="line">            a_idx = (a_idx + <span class="number">1</span>) % a.length;</span><br><span class="line">            <span class="keyword">var</span> x = e.pageX,</span><br><span class="line">            y = e.pageY;</span><br><span class="line">            $i.css(&#123;</span><br><span class="line">                <span class="string">"z-index"</span>: <span class="number">5</span>,</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">20</span>,</span><br><span class="line">                <span class="string">"left"</span>: x,</span><br><span class="line">                <span class="string">"position"</span>: <span class="string">"absolute"</span>,</span><br><span class="line">                <span class="string">"font-weight"</span>: <span class="string">"bold"</span>,</span><br><span class="line">                <span class="string">"color"</span>: <span class="string">"#ff6651"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            $(<span class="string">"body"</span>).append($i);</span><br><span class="line">            $i.animate(&#123;</span><br><span class="line">                <span class="string">"top"</span>: y - <span class="number">180</span>,</span><br><span class="line">                <span class="string">"opacity"</span>: <span class="number">0</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="number">1500</span>,</span><br><span class="line">            <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                $i.remove();</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>但是不要忘了添加Jquery</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>里面的z-index是html的显示层级，可以根据要求设置成页面的顶端，即将数字填大，但是有的浏览器如果数字太大会出现错误导致错误，一般在<strong>-2147483647～2147483648</strong>之间</p>
-
       
     </div>
 
@@ -603,6 +611,10 @@
                 <div class="site-state-item site-state-tags">
                   
                     
+                      <a href="/tags/">
+                    
+                  
+                    
                     
                       
                     
@@ -622,7 +634,7 @@
                     
                     <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">tags</span>
-                  
+                  </a>
                 </div>
               
             </nav>
@@ -695,7 +707,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -818,6 +830,9 @@
 
 
   
+  <script src="/js/js.cookie.js?v=7.1.2"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.2"></script>
+
 
   
 
